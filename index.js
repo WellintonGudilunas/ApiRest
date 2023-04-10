@@ -20,12 +20,9 @@ app.use('/person', personRoutes);
 
 // rota inicial / endpoint
 app.get('/', (req, res) => {
-    
-    // mostrar requisisao
     res.json({msg: 'Oi express'});
 });
 
-// entregar uma porta
 const DB_USER = process.env.DB_USER;
 const DB_PASSWORD = process.env.DB_PASSWORD;
 
