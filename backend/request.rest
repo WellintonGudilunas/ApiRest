@@ -1,0 +1,9 @@
+POST http://localhost:3000/api/services
+Content-Type: application/json
+
+{
+    "name": "Teste",
+    "description": "Desc teste",
+    "price": 1300,
+    "image": "oi"
+}
