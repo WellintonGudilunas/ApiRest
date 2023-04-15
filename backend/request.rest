@@ -1,9 +1,90 @@
 POST http://localhost:3000/api/services
 Content-Type: application/json
-
 {
     "name": "Teste",
     "description": "Desc teste",
     "price": 1300,
     "image": "oi"
 }
+###
+GET http://localhost:3000/api/services
+
+###
+GET http://localhost:3000/api/services/643a1224166e9c17fa2f4307
+###
+DELETE http://localhost:3000/api/services/643aea6e189cf5ff14f0e0a7
+###
+PUT http://localhost:3000/api/services/643a1224166e9c17fa2f4307
+Content-Type: application/json
+
+{
+    "name": "ATUALIZA",
+    "description": "ATUALIZA teste",
+    "price": 2000,
+    "image": "SEM IMAG"
+}
+###
+POST http://localhost:3000/api/parties
+Content-Type: application/json
+
+{
+    "title": "Meu evento 2",
+    "author": "Matheus",
+    "description": "Uma festa e aniversário",
+    "budget": 2000,
+    "image": "fjfj",
+    "services": [
+        {
+            "name": "Servico 1",
+            "description": "Desc teste",
+            "price": 3000,
+            "image": "oi"
+        },
+        {
+            "name": "Servico 2",
+            "description": "Desc teste",
+            "price": 1600,
+            "image": "oi"
+        }
+    ]
+}
+###
+GET http://localhost:3000/api/parties
+###
+GET http://localhost:3000/api/parties/643aef33110f28bbdac4df9b
+###
+DELETE http://localhost:3000/api/parties/643aef33110f28bbdac4df9b
+###
+
+PUT http://localhost:3000/api/parties/643aefd4110f28bbdac4df9d
+ Content-Type: application/json
+
+{
+    "title": "Meu evento 10",
+    "author": "Tomilho",
+    "description": "Uma festaaaa",
+    "budget": 10000,
+    "image": "Sem imagem",
+    "services": [
+        {
+            "name": "Servico 1",
+            "description": "Desc teste",
+            "price": 3000,
+            "image": "oi"
+        },
+        {
+            "name": "Servico 2",
+            "description": "Desc teste",
+            "price": 1600,
+            "image": "oi"
+        }
+    ]
+}
+
+
+
+
+
+
+
+

@@ -5,7 +5,7 @@ const {serviceSchema} = require("./Service");
 
 const partySchema = new Schema(
     {
-        tittle: {
+        title: {
             type: String,
             required: true,
         },
