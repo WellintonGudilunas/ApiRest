@@ -1,4 +1,4 @@
-const serviceModel = require("../models/Service");
+const { Service: ServiceModel } = require("../models/Service");
 
 const serviceController = {
     create: async(req, res) => {
@@ -10,9 +10,19 @@ const serviceController = {
                 image: req.body.image
             };
 
-            const response = await serviceModel.create(service);
+            const response = await ServiceModel.create(service);
             
             res.status(201).json({ response, msg: "Serviço Criado com sucesso!" });
+
+        } catch (error) {
+            console.log(error);
+        }
+    },
+
+    getAll: async (req, res) => {
+        try {
+            const services = await ServiceModel.find();
+            res.json(services);
 
         } catch (error) {
             console.log(error);
